@@ -42,6 +42,9 @@ class MerkleTree
         }
 
         $this->root = $new_list[0];
+
+        // We return the root immediately, but there is also a getRoot() method.
+        return $this->root;
     }
 
 
