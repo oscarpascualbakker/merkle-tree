@@ -1,13 +1,13 @@
 # Merkle Tree in PHP
 
-This README.md file describes a PHP implementation of Ralph Merkle's hash tree, also called "The Merkle Tree".  The Merkle tree is essentially a binary tree, where nodes can have one or two children (not zero, as that would be a leaf).  Once the algorithm is finished, on top of the Merkle tree we will find a hash value call "Merkle Root", which is a unique value representing all the leaves.
+This README.md file describes a PHP implementation of Ralph Merkle's hash tree, also called "The Merkle Tree".  The Merkle tree is essentially a binary tree, where nodes can have one or two children (not zero, as that would be a leaf).  Once the algorithm is finished, on top of the Merkle tree we will find a hash value called "Merkle Root", which is a unique value representing all the leaves.
 
 In this implementation I only want to obtain the Merkle root, the value on top of the Merkle tree.
 
 ## How it works
 The Merkle tree algorithm starts with a set of data, which can be a simple string, or a file, or ... The only condition is that it must be "hashable".  Let's suggest four data blocks called A, B, C and D.
 
-The first thing to do is to convert those blocks into a hash value.  In the algorithm this is done by adding them (see method Add).
+The first thing to do is to convert those blocks into a hash value.  In the algorithm this is done by adding them to the tree (see method Add).
 
 When the values are placed as leaves of the Merkle tree it is time to create parents, who's value is the hash of its children's hashes.  Let's see a small example.
 
