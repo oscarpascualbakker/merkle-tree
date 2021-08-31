@@ -15,6 +15,7 @@ class MerkleTreeTest extends TestCase
      *
      * This test will work with a single hash.  If double hashing is applied it won't work.
      *
+     * @covers MerkleTree
      * @return void
      */
     public function test_merkle_root_is_ok()
@@ -45,6 +46,7 @@ class MerkleTreeTest extends TestCase
      *
      * This test will work with a single hash.  If double hashing is applied it won't work.
      *
+     * @covers MerkleTree
      * @return void
      */
     public function test_merkle_root_is_ok_with_odd_number_of_elements()
